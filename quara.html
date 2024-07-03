@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #19e9de;
+            color: rgb(8, 8, 8);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: rgb(2, 2, 2);
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .service, .team-member {
+            margin: 1rem 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label, form input, form select, form button {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        footer {
+            background-color: #22ccb5;
+            color: rgb(3, 3, 3);
+            text-align: left to right;
+            padding: 1rem 0;
+            position: flexible;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our Barbershop</h1>
+        <p>Your style, our care.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Haircut</h3>
+            <p>Professional haircuts for all ages.</p>
+        </div>
+        <div class="service">
+            <h3>Shaving</h3>
+            <p>Smooth and clean shaves.</p>
+        </div>
+        <div class="service">
+            <h3>Beard Trim</h3>
+            <p>Keep your beard looking sharp.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <h3>John Doe</h3>
+            <p>Master Barber</p>
+        </div>
+        <div class="team-member">
+            <h3>Jane Smith</h3>
+            <p>Stylist</p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="haircut">Haircut</option>
+                <option value="shaving">Shaving</option>
+                <option value="beard-trim">Beard Trim</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@barbershop.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Barbershop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Booking submitted!');
+        });
+    </script>
+</body>
+</html>
